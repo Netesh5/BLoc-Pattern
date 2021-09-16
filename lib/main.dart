@@ -129,10 +129,11 @@ class Mainbody extends StatefulWidget {
 class _MainbodyState extends State<Mainbody> {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        children: [],
-      ),
-    );
+    return Container(child: ListView.builder(itemBuilder: (context, index) {
+      return Container(
+        height: 100,
+        color: Colors.deepOrangeAccent,
+      );
+    }));
   }
 }
