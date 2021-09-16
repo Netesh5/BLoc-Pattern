@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 
 void main() => runApp(Homepage());
 
-class Homepage extends StatelessWidget {
+// ----Counter meter with bloc-----//
+
+/* class Homepage extends StatelessWidget {
   const Homepage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -93,6 +95,43 @@ class _MainbodyState extends State<Mainbody> {
                 CounterBloc.eventsink.add(counterAction.Increment);
               }),
         ],
+      ),
+    );
+  }
+} */
+
+//-----Restful API integration ------//
+
+class Homepage extends StatelessWidget {
+  const Homepage({Key? key}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Restful API Integration'),
+          backgroundColor: Colors.blueAccent,
+        ),
+        body: const Mainbody(),
+      ),
+    );
+  }
+}
+
+class Mainbody extends StatefulWidget {
+  const Mainbody({Key? key}) : super(key: key);
+
+  @override
+  _MainbodyState createState() => _MainbodyState();
+}
+
+class _MainbodyState extends State<Mainbody> {
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        children: [],
       ),
     );
   }
